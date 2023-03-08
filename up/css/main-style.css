@@ -28,4 +28,8 @@ textarea {
   border: none;
   outline: none;
   border-radius: 0.5rem;
+}
+
+:root {
+  font-size: 62.5%;
 }/*# sourceMappingURL=main-style.css.map */

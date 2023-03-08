@@ -1,0 +1,58 @@
+:root {
+  font-size: 62.5%;
+}
+
+//     fs     = Font Size
+//     fw     = Font Weight
+
+//     -------------------- Sizing Nature
+//     d      = dynamic
+//     st     = static
+
+//     -------------------- Sizing
+//     xl      = extra large
+//     l      = large
+//     m      = medium
+//     s      = small
+//     xs     = extra small
+//     c      = customized
+
+$fs-d: (
+  "lc": calc(3rem + 3.5vw),
+  "l": calc(2rem + 3vw),
+  "mc": calc(2rem + 2.5vw),
+  "m": calc(1rem + 2vw),
+  "sc": calc(1rem + 1.5vw),
+  "s": calc(1rem + 1vw),
+);
+
+@function font-size-d($f-s-d) {
+  @return map-get($fs-d, $f-s-d);
+}
+
+$fs-st: (
+  "xl": 4rem,
+  "lc": 3.5rem,
+  "l": 3rem,
+  "mc": 2.5rem,
+  "m": 2rem,
+  "sc": 1.5rem,
+  "s": 1rem,
+);
+
+@function font-size-st($f-s-st) {
+  @return map-get($fs-st, $f-s-st);
+}
+
+$fw: (
+  "thin": 100,
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+  "black-fw": 900,
+);
+
+@function font-weight($f-w) {
+  @return map-get($fw, $f-w);
+}

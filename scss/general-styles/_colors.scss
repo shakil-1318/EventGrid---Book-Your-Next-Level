@@ -1,8 +1,8 @@
 $colors-theme: (
-  "color-theme-1":hsl(216, 33%, 97%),
-  "color-theme-2":hsl(327, 97%, 48%),
-  "color-theme-3":hsl(253, 82%, 42%),
-  "color-theme-4":hsl(0, 0%, 100%),
+  "1":hsl(216, 33%, 97%),
+  "2":hsl(327, 97%, 48%),
+  "3":hsl(253, 82%, 42%),
+  "4":hsl(0, 0%, 100%),
 );
 
 @function color-theme($clr-theme) {
@@ -10,12 +10,12 @@ $colors-theme: (
 }
 
 $colors-type: (
-  "color-type-1":hsl(0, 0%, 100%),
-  "color-type-2":hsl(238, 50%, 13%),
-  "color-type-3":hsl(327, 97%, 48%),
-  "color-type-4":hsl(253, 82%, 42%),
-  "color-type-5":hsl(0, 0%, 45%),
-  "color-type-6":hsl(0, 0%, 96%),
+  "1":hsl(0, 0%, 100%),
+  "2":hsl(238, 50%, 13%),
+  "3":hsl(327, 97%, 48%),
+  "4":hsl(253, 82%, 42%),
+  "5":hsl(0, 0%, 45%),
+  "6":hsl(0, 0%, 96%),
 );
 
 @function color-type($clr-type) {

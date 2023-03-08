@@ -1,0 +1,7 @@
+$gradients: (
+  "primary-gradient": linear-gradient(45deg, hsla(253deg, 82%, 42%, 0.9), hsla(327deg, 97%, 48%, 0.7)),
+);
+
+@function gradient($grad) {
+  @return map-get($gradients, $grad);
+}

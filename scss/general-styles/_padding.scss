@@ -1,0 +1,66 @@
+// ----------*----------  Padding
+
+//       pad    = Padding
+
+//       -------------------- Sizing Nature
+//       d      = dynamic
+//       st     = static
+
+//       -------------------- Sizing
+//       l      = large
+//       m      = medium
+//       s      = small
+//       xs     = extra small
+//       c      = customized
+
+// -------------------- Orientation
+//       v      = vertical   (top & bottom)
+//       h      = horizontal (right & left)
+
+$pad-d-v: (
+  "l": calc(2rem + 12vh),
+  "mc": calc(1rem + 8vh),
+  "m": calc(1rem + 6vh),
+  "sc": calc(1rem + 4vh),
+  "s": calc(1rem + 1vh),
+);
+
+@function padding-d-v($padd-dv) {
+  @return map-get($pad-d-v, $padd-dv);
+}
+
+$pad-d-h: (
+  "l": calc(2rem + 12vw),
+  "mc": calc(1rem + 8vw),
+  "m": calc(1rem + 6vw),
+  "sc": calc(1rem + 4vw),
+  "s": calc(1rem + 2vw),
+  "xs": calc(1rem + 1vw),
+);
+
+@function padding-d-h($padd-dh) {
+  @return map-get($pad-d-h, $padd-dh);
+}
+
+$pad-st-v: (
+  "xl": 4rem,
+  "lc": 3rem,
+  "l": 2rem,
+  "m": 1.5rem,
+  "s": 1rem,
+);
+
+@function padding-st-v($padd-stv) {
+  @return map-get($pad-st-v, $padd-stv);
+}
+
+$pad-st-h: (
+  "l": 3rem,
+  "m": 2.5rem,
+  "s": 2rem,
+  "xs": 1.5rem,
+);
+
+@function padding-st-h($padd-sth) {
+  @return map-get($pad-st-h, $padd-sth);
+}
