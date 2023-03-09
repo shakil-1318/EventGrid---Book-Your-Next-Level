@@ -1,0 +1,9 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.sec-link {
+  color: clrs.color-type("1");
+  font-size: type.font-size-st(sc);
+  padding: pad.padding-st-v(s) pad.padding-st-h(l);
+}

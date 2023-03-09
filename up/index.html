@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -22,7 +23,52 @@
 </head>
 
 <body>
-  <h1>Hello Biik</h1>
+  <main class="container">
+    <header class="header overall-layout padd sec-flex">
+      <nav class="header__nav">
+        <a href="#" class="header__nav--logo">
+          <img src="./images/header/logo.svg" alt="logo">
+        </a>
+
+        <div class="header__nav--hamburger">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+        </div>
+
+        <ul class="header__nav--links">
+          <a href="#" class="header__nav--links__link">Home</a>
+          <a href="gallery.html" target="_blank" class="header__nav--links__link">Gallery</a>
+          <a href="pricing.html" target="_blank" class="header__nav--links__link">Pricing</a>
+          <a href="schedule.html" target="_blank" class="header__nav--links__link">Scheduling</a>
+          <a href="speaker.html" target="_blank" class="header__nav--links__link">Speakers</a>
+          <a href="blog.html" target="_blank" class="header__nav--links__link">Blog</a>
+          <a href="contact.html" target="_blank" class="header__nav--links__link">Contact</a>
+        </ul>
+
+        <a href="pricing.html" class="header__nav--cta sec-link">
+          Get tickets <i class="fa-solid fa-ticket"></i>
+        </a>
+      </nav>
+
+      <section class="header__hero">
+        <p class="header__hero--location">
+          <i class="fa-solid fa-location-dot"></i>
+          WaterFront Hotel, London
+        </p>
+        <h1 class="header__hero--title">The Largest Conference In <span>Europe</span></h1>
+        <p class="header__hero--para sec-para">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, minima.
+          <span>Lorem ipsum dolor sit, amet consectetur adipisicing.</span>
+        </p>
+        <a href="pricing.html" class="header__hero--ticket-link sec-link">
+          Buy Ticket Now
+        </a>
+      </section>
+    </header>
+  </main>
+
+  <!-- Main Js -->
+  <script src="./js/app.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,99 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.header {
+  background-image: url('../../up/images/hero/hero-bg.jpg');
+  background-size: cover;
+  padding-bottom: calc(pad.padding-d-v(l) + pad.padding-d-v(l));
+
+  gap: calc(4rem + 4vw);
+
+  &__nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    &--logo {
+      width: 20rem;
+
+      img {
+        width: 75%;
+        height: 75%;
+      }
+    }
+
+    &--links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+
+      &__link {
+        color: clrs.color-link("1");
+        font-size: type.font-size-st(sc);
+        font-weight: type.font-weight(bold);
+      }
+    }
+
+    &--cta {
+      background-color: clrs.color-theme("3");
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 1rem;
+
+      &:hover {
+        background-color: clrs.color-theme("2");
+      }
+    }
+  }
+
+  &__hero {
+
+    display: grid;
+    justify-items: center;
+    gap: 3rem;
+
+    text-align: center;
+    color: clrs.color-type("1");
+
+    &--location {
+      font-size: type.font-size-st(sc);
+      font-weight: type.font-weight(medium);
+      background-color: rgba(clrs.color-theme("1"), 0.2);
+      padding: pad.padding-st-v(s) pad.padding-st-h(l);
+      border-radius: .5rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 1rem;
+    }
+
+    &--title {
+      font-size: type.font-size-d(m);
+      font-weight: type.font-weight(black-fw);
+      line-height: 1.1;
+
+      span {
+        display: block;
+      }
+    }
+
+    &--para {
+      color: clrs.color-type("1");
+    }
+
+    &--ticket-link {
+      background-color: clrs.color-theme("2");
+
+      &:hover {
+        background-color: clrs.color-theme("3");
+      }
+    }
+  }
+}

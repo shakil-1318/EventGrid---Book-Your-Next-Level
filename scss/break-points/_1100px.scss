@@ -1,0 +1,20 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+@media screen and (max-width: 1100px) {
+
+  //===================== Header
+  .header__nav--links {
+    flex-basis: 100%;
+    order: 3;
+  }
+
+  .header__hero {
+    gap: 2rem;
+
+    &--title {
+      font-size: type.font-size-st(lc);
+    }
+  }
+}
