@@ -100,4 +100,45 @@
     }
   }
 
+  // --------------------countdown
+  .countdown {
+    padding: 0;
+
+    &__content {
+      flex-direction: column;
+      border-left: 0;
+      border-right: 0;
+      transform: translateY(0);
+      border-radius: 0;
+
+      &::before,
+      &::after {
+        width: 50%;
+      }
+
+      &::after {
+        background-position: right center;
+      }
+
+      &--day,
+      &--hour,
+      &--minute,
+      &--second {
+        flex-direction: column;
+
+        div {
+
+          p:first-child {
+            font-size: type.font-size-st(mc);
+          }
+
+          p:last-child {
+            font-size: type.font-size-st(sc);
+          }
+        }
+      }
+
+    }
+  }
+
 }
