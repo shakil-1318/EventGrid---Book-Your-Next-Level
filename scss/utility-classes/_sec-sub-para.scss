@@ -1,0 +1,9 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.sec-sub-para {
+  font-size: type.font-size-st(sc);
+  font-weight: type.font-weight(bold);
+  color: rgba(clrs.color-type('2'), .4);
+}

@@ -1,0 +1,111 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.features {
+  background-color: clrs.color-theme('1');
+  padding-top: 0;
+
+  &__mini-title {
+    &::before {
+      left: -25% !important;
+    }
+
+    &::after {
+      right: -25% !important;
+    }
+  }
+
+  &__container {
+
+    &--feature {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, min-content);
+      place-items: start;
+      gap: 1.5rem;
+
+      background-color: clrs.color-theme('4');
+      border-radius: .5rem;
+      padding: pad.padding-st-v(lc) pad.padding-st-h(l);
+
+      overflow: hidden;
+      position: relative;
+
+      &__icon {
+        grid-column: 1/2;
+        grid-row: 1/2;
+
+        font-size: type.font-size-st(mc);
+        padding: pad.padding-st-v(m) pad.padding-st-h(s);
+        color: clrs.color-type('1');
+        background-color: clrs.color-theme('3');
+        border-radius: .5rem;
+
+        transition: all .25s ease-in-out;
+      }
+
+      &__number {
+        grid-column: 4/-1;
+        grid-row: 1/2;
+        justify-self: end;
+
+        font-size: type.font-size-st(xl);
+        color: rgba(clrs.color-type('2'), .05);
+      }
+
+      &__title {
+        grid-column: 1/-1;
+        grid-row: 2/3;
+        font-size: type.font-size-st(m);
+      }
+
+      &__desc {
+        grid-column: 1/-1;
+        grid-row: 3/-1;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        height: 30%;
+        width: 2rem;
+        background-repeat: no-repeat;
+        transition: all .25s ease-in-out;
+      }
+
+      &::before {
+        top: 0;
+        left: 0;
+        background-image: url('../../up/images/features/dots-blue.svg');
+      }
+
+      &::after {
+        bottom: 0;
+        right: 0;
+        background-image: url('../../up/images/features/dots-pink.svg');
+      }
+
+      @media(hover) {
+        &::before {
+          left: -3rem;
+        }
+
+        &::after {
+          right: -3rem;
+        }
+
+        &:hover::before {
+          left: 0;
+        }
+
+        &:hover::after {
+          right: 0;
+        }
+
+      }
+    }
+
+  }
+}

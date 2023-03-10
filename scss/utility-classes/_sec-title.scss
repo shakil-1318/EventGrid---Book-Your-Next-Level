@@ -1,0 +1,10 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.sec-title {
+  font-size: type.font-size-d(sc);
+  font-weight: type.font-weight(black-fw);
+  color: clrs.color-type('2');
+  text-align: center;
+}
