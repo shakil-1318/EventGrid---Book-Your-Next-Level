@@ -1,0 +1,7 @@
+@use "../general-styles/" as clrs;
+
+@media screen and (max-width: 1500px) {
+  body {
+    background-color: clrs.color-theme('1');
+  }
+}

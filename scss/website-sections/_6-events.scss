@@ -1,0 +1,138 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.events {
+  background-color: clrs.color-theme('1');
+
+  &__days {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: .5rem;
+
+    &--day {
+      background-color: clrs.color-theme('4');
+      padding: pad.padding-st-v(lc) pad.padding-st-h(l);
+      border-radius: .5rem;
+      transition: all .25s ease-in-out;
+      border-bottom: 4px solid transparent;
+
+      &:hover:not(&.current) {
+        border-bottom: 4px solid clrs.color-theme("2");
+      }
+
+      &:not(&.current) {
+        cursor: pointer;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      &.current {
+        background-color: clrs.color-theme('3');
+
+        p {
+          color: clrs.color-type('1');
+        }
+      }
+    }
+  }
+
+  &__timing {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+
+    gap: 2rem;
+
+    &--event {
+      background-color: clrs.color-theme("4");
+      padding: pad.padding-st-v(l) pad.padding-st-h(s);
+      border-radius: .5rem;
+      transition: all .25s ease-in-out;
+
+      border-left: 4px solid transparent;
+
+      &:hover {
+        border-left: 4px solid clrs.color-theme('2');
+      }
+
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      justify-content: space-between;
+      gap: 2rem;
+
+      &__date-time {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+
+        &>p {
+          font-size: type.font-size-st(xl);
+          font-weight: type.font-weight(black-fw);
+        }
+      }
+
+      &__desc {
+        justify-self: center;
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+
+        figure {
+          width: 8rem;
+          height: 8rem;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+
+        &>div {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          p:last-of-type {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            i {
+              color: clrs.color-type("3");
+              font-size: type.font-size-st(sc);
+            }
+          }
+        }
+      }
+
+      &__link {
+        background-color: clrs.color-theme("3");
+        // place-self: center end;
+        align-self: center;
+        justify-self: end;
+
+        &:hover {
+          background-color: clrs.color-theme("2");
+        }
+
+      }
+    }
+  }
+
+  &__more-events {
+    background-color: clrs.color-theme("2");
+    margin-top: 4rem;
+
+    &:hover {
+      background-color: clrs.color-theme("3");
+    }
+  }
+}

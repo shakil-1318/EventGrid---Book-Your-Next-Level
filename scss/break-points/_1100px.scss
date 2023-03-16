@@ -17,4 +17,33 @@
       font-size: type.font-size-st(lc);
     }
   }
+
+  //===================== Events
+  .events {
+
+    &__timing {
+
+      &--event {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, min-content);
+
+        &__date-time {
+          justify-self: center;
+        }
+
+        &__desc {
+          grid-column: 1 / 2;
+          grid-row: 2 / 3;
+          justify-self: start;
+        }
+
+        &__link {
+          grid-column: 1 / 2;
+          grid-row: 2 / 3;
+          justify-self: end;
+        }
+      }
+    }
+  }
 }

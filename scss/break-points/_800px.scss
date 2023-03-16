@@ -1,0 +1,25 @@
+@use "../general-styles/colors";
+@use "../general-styles/padding";
+@use "../general-styles/typography";
+
+@media screen and (max-width: 800px) {
+
+  //===================== Events
+  .events {
+    &__timing {
+
+      &--event {
+        grid-template-rows: repeat(3, min-content);
+
+        &__desc {
+          justify-self: center;
+        }
+
+        &__link {
+          grid-row: 3 / 4;
+          justify-self: center;
+        }
+      }
+    }
+  }
+}

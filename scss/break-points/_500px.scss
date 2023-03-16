@@ -1,0 +1,32 @@
+@use "../general-styles/colors";
+@use "../general-styles/padding";
+@use "../general-styles/typography";
+
+@media screen and (max-width: 500px) {
+  .events {
+
+    &__timing {
+
+      &--event {
+
+        &__desc {
+          flex-direction: column;
+          row-gap: 2rem;
+
+          div {
+            gap: 2rem;
+
+            p:first-of-type {
+              text-align: center;
+            }
+
+            p:last-of-type {
+              flex-direction: column;
+              gap: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

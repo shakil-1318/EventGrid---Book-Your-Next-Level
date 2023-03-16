@@ -1,0 +1,84 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.speakers {
+  &__container {
+    &--speaker {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: repeat(9, min-content) 2rem repeat(2, min-content);
+
+      position: relative;
+      overflow: hidden;
+
+      &__img {
+        grid-column: 1 / -1;
+        grid-row: 1/ 10;
+
+        img {
+          border-radius: .5rem;
+        }
+      }
+
+      &__name {
+        grid-column: 2 / -1;
+        grid-row: 11 / 12;
+      }
+
+      &__role {
+        grid-column: 2 / -1;
+        grid-row: 12/13;
+      }
+
+      &__social {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all .4s ease-in-out;
+
+        display: flex;
+        column-gap: 1rem;
+
+        i {
+          font-size: type.font-size-st(m);
+          color: clrs.color-type("1");
+          padding: pad.padding-st-v(s);
+          opacity: .7;
+          border-radius: .5rem;
+          cursor: pointer;
+        }
+
+        i:first-child {
+          background-color: clrs.color-social(facebook);
+        }
+
+        i:nth-child(2) {
+          background-color: clrs.color-social(twitter);
+        }
+
+        i:nth-child(3) {
+          background-color: clrs.color-social(linkedin);
+        }
+
+        i:nth-child(4) {
+          background-color: clrs.color-social(instagram);
+        }
+
+      }
+
+      @media (hover) {
+        &__social {
+          left: -10rem;
+          opacity: 0;
+        }
+
+        &:hover &__social {
+          left: 50%;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.sec-sub-title {
+  font-size: type.font-size-st(m);
+  font-weight: type.font-weight(medium);
+  color: clrs.color-type("3");
+  transition: all .25s ease-in-out;
+
+  @media (hover) {
+    & {
+      color: clrs.color-type("2");
+    }
+
+    &:hover {
+      color: clrs.color-type("3");
+    }
+  }
+}

@@ -3,7 +3,7 @@
 @use "../general-styles/typography" as type;
 
 .features {
-  background-color: clrs.color-theme('1');
+  background-color: clrs.color-theme("1");
   padding-top: 0;
 
   &__mini-title {
@@ -17,7 +17,6 @@
   }
 
   &__container {
-
     &--feature {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -25,69 +24,69 @@
       place-items: start;
       gap: 1.5rem;
 
-      background-color: clrs.color-theme('4');
-      border-radius: .5rem;
+      background-color: clrs.color-theme("4");
+      border-radius: 0.5rem;
       padding: pad.padding-st-v(lc) pad.padding-st-h(l);
 
-      overflow: hidden;
       position: relative;
+      overflow: hidden;
 
       &__icon {
-        grid-column: 1/2;
-        grid-row: 1/2;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
 
         font-size: type.font-size-st(mc);
-        padding: pad.padding-st-v(m) pad.padding-st-h(s);
-        color: clrs.color-type('1');
-        background-color: clrs.color-theme('3');
-        border-radius: .5rem;
-
-        transition: all .25s ease-in-out;
+        padding: pad.padding-st-v(m) pad.padding-st-h(xs);
+        color: clrs.color-type("1");
+        background-color: clrs.color-theme("3");
+        border-radius: 0.5rem;
+        transition: all 0.25s ease-in-out;
       }
 
       &__number {
-        grid-column: 4/-1;
-        grid-row: 1/2;
+        grid-column: 4 / 5;
+        grid-row: 1 / 2;
         justify-self: end;
 
         font-size: type.font-size-st(xl);
-        color: rgba(clrs.color-type('2'), .05);
+        color: rgba(clrs.color-type("2"), 0.05);
       }
 
       &__title {
-        grid-column: 1/-1;
-        grid-row: 2/3;
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+
         font-size: type.font-size-st(m);
       }
 
       &__desc {
-        grid-column: 1/-1;
-        grid-row: 3/-1;
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
       }
 
       &::before,
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         height: 30%;
         width: 2rem;
         background-repeat: no-repeat;
-        transition: all .25s ease-in-out;
+        transition: all 0.25s ease-in-out;
       }
 
       &::before {
         top: 0;
         left: 0;
-        background-image: url('../../up/images/features/dots-blue.svg');
+        background-image: url("../../up/images/features/dots-blue.svg");
       }
 
       &::after {
         bottom: 0;
         right: 0;
-        background-image: url('../../up/images/features/dots-pink.svg');
+        background-image: url("../../up/images/features/dots-pink.svg");
       }
 
-      @media(hover) {
+      @media (hover) {
         &::before {
           left: -3rem;
         }
@@ -103,9 +102,7 @@
         &:hover::after {
           right: 0;
         }
-
       }
     }
-
   }
 }
