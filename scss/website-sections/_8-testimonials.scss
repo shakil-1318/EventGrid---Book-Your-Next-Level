@@ -1,0 +1,72 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+@use "../general-styles/gradients" as grad;
+
+.testimonials {
+  background-image: grad.gradient(primary-gradient);
+
+  &__mini-title {
+    color: clrs.color-type('1');
+
+    &::before,
+    &::after {
+      background-color: clrs.color-type('1');
+    }
+  }
+
+  &__title {
+    color: clrs.color-type('1');
+  }
+
+  &__desc {
+    color: clrs.color-type('1');
+  }
+
+  &__container {
+    &--testimonial {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      background-color: clrs.color-theme('1');
+      padding: pad.padding-st-v(xl) pad.padding-st-v(l);
+      border-radius: .5rem;
+
+      &__personal-info {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        &--img {
+          width: 10rem;
+          height: 10rem;
+
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+
+        div {
+          p:last-of-type {
+            display: flex;
+            gap: .2rem;
+            margin-top: .8em;
+
+            i {
+              color: orange;
+            }
+          }
+        }
+      }
+
+      &__desc {
+        text-align: left;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

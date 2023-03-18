@@ -22,4 +22,10 @@
       }
     }
   }
+
+  .footer {
+    &>div {
+      flex-basis: 30%;
+    }
+  }
 }

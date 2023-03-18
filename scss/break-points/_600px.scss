@@ -10,6 +10,10 @@
     padding: pad.padding-d-v(sc) pad.padding-d-h(s);
   }
 
+  .sec-title {
+    font-size: type.font-size-st(mc);
+  }
+
   .responsive-grid {
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 1.5rem

@@ -1,0 +1,84 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+@use "../general-styles/gradients" as grad;
+
+.blogs {
+  background-color: clrs.color-theme('1');
+
+  &__container {
+    &--blog {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      padding: pad.padding-st-v(l) pad.padding-st-h(s) pad.padding-st-v(lc);
+      border-radius: 0.5rem;
+      background-color: clrs.color-theme("4");
+      box-shadow: 2px 2px 15px rgba(clrs.color-type("5"), 0.4);
+      transition: all 0.3s ease-in-out;
+
+      position: relative;
+
+      &:hover {
+        box-shadow: none;
+        transform: scale(.95);
+      }
+
+      &__date {
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+
+        background-color: clrs.color-theme('2');
+        padding: pad.padding-st-v(s);
+        border-radius: .5rem;
+        color: clrs.color-type('1');
+        transition: all .25s ease-in-out;
+
+        &:hover {
+          background-color: clrs.color-theme('3');
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        span:first-child {
+          font-size: type.font-size-st(m);
+        }
+
+        span:last-child {
+          font-size: type.font-size-st(sc);
+          font-weight: type.font-weight(light);
+        }
+      }
+
+      &__categorie {
+        font-size: type.font-size-st(sc);
+        color: clrs.color-theme('3');
+        transition: all .25s ease-in-out;
+
+        &:hover {
+          color: clrs.color-theme('2');
+        }
+      }
+
+      &__desc {
+        font-weight: type.font-weight(regular);
+      }
+
+
+      &__link {
+        background-color: clrs.color-theme('3');
+        align-self: flex-start;
+
+        &:hover {
+          background-color: clrs.color-theme('2');
+        }
+      }
+
+    }
+  }
+}

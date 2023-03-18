@@ -1,0 +1,128 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+@use "../general-styles/gradients" as grad;
+
+.pricing {
+  background-image: grad.gradient(primary-gradient), url('../../up/images/pricing/pricing-bg.jpg');
+  background-size: cover;
+  background-position: center;
+
+  &__mini-title {
+    color: clrs.color-type('1');
+
+    &::after,
+    &::before {
+      background-color: clrs.color-type('1');
+    }
+  }
+
+  &__title {
+    color: clrs.color-type('1');
+  }
+
+  &__desc {
+    color: clrs.color-type('1');
+  }
+
+  &__container {
+
+    &--plan {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+
+      background-color: clrs.color-theme('4');
+      padding: pad.padding-st-v(xl) pad.padding-st-h(l);
+      border-radius: .5rem;
+      transition: all .25s ease-in-out;
+
+      &:hover {
+        transform: translateY(-1rem);
+      }
+
+      &__type {
+        font-size: type.font-size-st(sc);
+        padding: pad.padding-st-v(s) pad.padding-st-h(s);
+        border-radius: 5rem;
+      }
+
+      &:nth-child(2n + 1) &__type {
+        border: 2px solid clrs.color-theme("3");
+        color: clrs.color-type("4");
+      }
+
+      &:nth-child(2n) &__type {
+        border: 2px solid clrs.color-theme("2");
+        color: clrs.color-type("3");
+      }
+
+      &__ticket {
+        font-weight: type.font-weight(regular);
+      }
+
+      &__price {
+        font-size: type.font-size-st(lc);
+        font-weight: type.font-weight(medium);
+      }
+
+      &:nth-child(2n + 1) &__get-ticket {
+        background-color: clrs.color-theme('3');
+
+        &:hover {
+          background-color: clrs.color-theme('2');
+        }
+      }
+
+      &:nth-child(2n) &__get-ticket {
+        background-color: clrs.color-theme('2');
+
+        &:hover {
+          background-color: clrs.color-theme('3');
+        }
+      }
+
+      &__get-ticket {
+        margin-bottom: 2rem;
+        position: relative;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          height: 2rem;
+          width: 2rem;
+          border-radius: 50%;
+          background-color: clrs.color-theme("4");
+        }
+
+        &::before {
+          left: 0;
+          transform: translateX(-50%) translateY(-50%);
+        }
+
+        &::after {
+          right: 0;
+          transform: translateX(50%) translateY(-50%);
+        }
+      }
+
+      &__features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 1rem;
+
+        &>li {
+          font-size: type.font-size-st(sc);
+          color: rgba(clrs.color-type("2"), 0.7);
+        }
+      }
+
+    }
+  }
+}

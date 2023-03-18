@@ -1,0 +1,21 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+@use "../general-styles/gradients" as grad;
+
+.cta {
+  background-image: grad.gradient(primary-gradient), url('../../up/images/call-action/call-bg.jpg');
+
+  &__mini-title {
+    color: clrs.color-type('1');
+    border: 2px solid clrs.color-type('1');
+  }
+
+  &__title {
+    color: clrs.color-type('1');
+  }
+
+  &__desc {
+    color: clrs.color-type('1');
+  }
+}
