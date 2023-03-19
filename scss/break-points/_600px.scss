@@ -162,4 +162,14 @@
     }
   }
 
+  .contact {
+    &__form {
+      row-gap: 1.5rem;
+
+      fieldset {
+        flex-direction: column;
+        row-gap: 1.5rem;
+      }
+    }
+  }
 }

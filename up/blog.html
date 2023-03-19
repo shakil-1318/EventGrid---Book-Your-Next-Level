@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/main-style.css">
+  <title>EventGrid - Book Your Next Level</title>
+
+</head>
+
+<body>
+  <header class="header overall-layout padd sec-flex">
+    <nav class="header__nav">
+      <a href="#" class="header__nav--logo">
+        <img src="./images/header/logo.svg" alt="logo">
+      </a>
+
+      <div class="header__nav--hamburger">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+      </div>
+
+      <ul class="header__nav--links">
+        <a href="#" class="header__nav--links__link">Home</a>
+        <a href="gallery.html" target="_blank" class="header__nav--links__link">Gallery</a>
+        <a href="pricing.html" target="_blank" class="header__nav--links__link">Pricing</a>
+        <a href="schedule.html" target="_blank" class="header__nav--links__link">Scheduling</a>
+        <a href="speaker.html" target="_blank" class="header__nav--links__link">Speakers</a>
+        <a href="blog.html" target="_blank" class="header__nav--links__link">Blog</a>
+        <a href="contact.html" target="_blank" class="header__nav--links__link">Contact</a>
+      </ul>
+
+      <a href="pricing.html" class="header__nav--cta sec-link">
+        Get tickets <i class="fa-solid fa-ticket"></i>
+      </a>
+    </nav>
+
+    <section class="header__redirect">
+      <h2 class="header__redirect--title sec-title">Our Blogs</h2>
+      <div class="header__redirect--links">
+        <a href="./index.html" target="_blank">Home</a>
+        <span>
+          >
+        </span>
+        <a href="#">Blog</a>
+      </div>
+    </section>
+  </header>
+
+  <!-- Blog Sections -->
+  <section class="blogs overall-layout padd sec-flex">
+    <h6 class="blogs__mini-title sec-mini-title">Blogs</h6>
+    <h2 class="blogs__title sec-title">Our Latest News</h2>
+    <p class="blogs__desc sec-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quaerat
+      inventore odio!
+      <span>Lorem ipsum dolor sit, amet consectetur adipisicing. </span>
+    </p>
+
+    <div class="blogs__container blog-page">
+      <div class="blogs__container blog__articles responsive-grid">
+
+        <div class="blogs__container--blog">
+          <h5 class="blogs__container--blog__date">
+            <span>30</span>
+            <span>Mar</span>
+          </h5>
+          <figure class="blogs__container--blog__img">
+            <img loading="lazy" src="./images/blog-page/blog-3.jpeg" alt="blog">
+          </figure>
+
+          <h5 class="blogs__container--blog__categorie">Events</h5>
+          <h3 class="blogs__container--blog__title sec-sub-title">3 Best Practices for Keeping Your Event Clients Happy
+          </h3>
+          <p class="blogs__container--blog__desc sec-sub-para">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Nulla, at ea laboriosam officiis dicta veritatis expedita maiores exercitationem maxime.</p>
+          <a class="blogs__container--blog__link sec-link" href="#">Read Blog</a>
+        </div>
+
+        <div class="blogs__container--blog">
+          <h5 class="blogs__container--blog__date">
+            <span>01</span>
+            <span>Apr</span>
+          </h5>
+          <figure class="blogs__container--blog__img">
+            <img loading="lazy" src="./images/blog-page/blog-5.jpg" alt="blog">
+          </figure>
+
+          <h5 class="blogs__container--blog__categorie">Conference</h5>
+          <h3 class="blogs__container--blog__title sec-sub-title">Adding a New Digital Dimension to Your Next Special
+            Event</h3>
+          <p class="blogs__container--blog__desc sec-sub-para">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Nulla, at ea laboriosam officiis dicta veritatis expedita maiores exercitationem maxime.</p>
+          <a class="blogs__container--blog__link sec-link" href="#">Read Blog</a>
+        </div>
+
+        <div class="blogs__container--blog">
+          <h5 class="blogs__container--blog__date">
+            <span>02</span>
+            <span>Apr</span>
+          </h5>
+          <figure class="blogs__container--blog__img">
+            <img loading="lazy" src="./images/blog-page/blog-4.jpg" alt="blog">
+          </figure>
+
+          <h5 class="blogs__container--blog__categorie">Marketing</h5>
+          <h3 class="blogs__container--blog__title sec-sub-title">Proven Marketing Strategies to Boost Digital Product
+            Sales </h3>
+          <p class="blogs__container--blog__desc sec-sub-para">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Nulla, at ea laboriosam officiis dicta veritatis expedita maiores exercitationem maxime.</p>
+          <a class="blogs__container--blog__link sec-link" href="#">Read Blog</a>
+        </div>
+      </div>
+
+      <div class="blogs__popular-feeds">
+        <form class="blogs__popular-feeds--search">
+          <fieldset>
+            <input type="search" placeholder="Search...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </fieldset>
+        </form>
+
+        <div class="blogs__popular-feeds--content">
+
+          <h2 class="blogs__popular-feeds--content__title sec-sub-title">Popular Feeds </h2>
+
+          <div class="blogs__popular-feeds--content__feed">
+            <figure class="blogs__popular-feeds--content__feed--img">
+              <img src="../up/images/blog-page/feed-1.JPG" alt="Event">
+            </figure>
+            <p class="blogs__popular-feeds--content__feed--desc sec-sub-para">
+              Lorem ipsum dolor sit amet consectetur adipisicing
+            </p>
+
+            <p class="blogs__popular-feeds--content__feed--date">
+              <i class="fa-solid fa-calendar-days"></i>
+              <span>Nov 5th, 2023</span>
+            </p>
+          </div>
+
+          <div class="blogs__popular-feeds--content__feed">
+            <figure class="blogs__popular-feeds--content__feed--img">
+              <img src="../up/images/blog-page/feed-2.JPG" alt="Event">
+            </figure>
+            <p class="blogs__popular-feeds--content__feed--desc sec-sub-para">
+              Lorem ipsum dolor sit amet consectetur adipisicing
+            </p>
+
+            <p class="blogs__popular-feeds--content__feed--date">
+              <i class="fa-solid fa-calendar-days"></i>
+              <span>Nov 5th, 2023</span>
+            </p>
+          </div>
+
+          <div class="blogs__popular-feeds--content__feed">
+            <figure class="blogs__popular-feeds--content__feed--img">
+              <img src="../up/images/blog-page/feed-3.JPG" alt="Event">
+            </figure>
+            <p class="blogs__popular-feeds--content__feed--desc sec-sub-para">
+              Lorem ipsum dolor sit amet consectetur adipisicing
+            </p>
+
+            <p class="blogs__popular-feeds--content__feed--date">
+              <i class="fa-solid fa-calendar-days"></i>
+              <span>Nov 5th, 2023</span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- CTA Sections -->
+  <section class="cta overall-layout padd sec-flex">
+    <h5 class="cta__mini-title pricing__container--plan__type">Hurry Up!</h5>
+    <h2 class="cta__title sec-title">Europe's Leading Conference Book Your Seat Now</h2>
+    <p class="cta__desc sec-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis id facilis
+      tempora
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing.</span>
+    </p>
+    <a href="#" class="cta__link header__nav--cta sec-link">
+      Get tickets <i class="fa-solid fa-ticket"></i>
+    </a>
+  </section>
+
+  <!-- Footer Sections -->
+  <footer class="footer overall-layout padd">
+    <div class="footer__info">
+      <figure class="footer__info--logo">
+        <img src="./images/footer/dark-logo.svg" alt="logo">
+      </figure>
+      <p class="footer__info--desc sec-sub-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
+        harum assumenda. Itaque exercitationem rerum non, beatae, consequuntur ea officiis ipsa labore praesentium
+        dolores eligendi molestias consequatur numquam eveniet illum</p>
+
+      <p class="footer__info--social sec-sub-para">Follow Us On:</p>
+
+      <div class="footer__info--social__container">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </div>
+
+    <div class="footer__quick-links">
+      <h3 class="footer__quick-links--title sec-sub-title">Quick Links</h3>
+      <ul class="footer__quick-links--container">
+        <li class="footer__quick-links--container__link">
+          <a href="#">Get Directions</a>
+        </li>
+        <li class="footer__quick-links--container__link">
+          <a href="#">Sponsor</a>
+        </li>
+        <li class="footer__quick-links--container__link">
+          <a href="#">What We Offer</a>
+        </li>
+        <li class="footer__quick-links--container__link">
+          <a href="#">Recent Events</a>
+        </li>
+        <li class="footer__quick-links--container__link">
+          <a href="#">Insights</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__explore-more">
+      <h3 class="footer__explore-more--title sec-sub-title">
+        Explore More
+      </h3>
+
+      <ul class="footer__explore-more--container">
+        <li class="footer__explore-more--container__link">
+          <a href="#">About Us</a>
+        </li>
+        <li class="footer__explore-more--container__link">
+          <a href="#">Our Pricing</a>
+        </li>
+        <li class="footer__explore-more--container__link">
+          <a href="#">FAQs</a>
+        </li>
+        <li class="footer__explore-more--container__link">
+          <a href="#">Guides</a>
+        </li>
+        <li class="footer__explore-more--container__link">
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__newsletter">
+      <h3 class="footer__newsletter--title sec-sub-title">
+        Subscribe to our Newsletter
+      </h3>
+
+      <form class="footer__newsletter--form">
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email Address" />
+        <input class="sec-link" type="submit" value="Subscribe" />
+      </form>
+    </div>
+
+  </footer>
+
+
+  <!-- Main Js -->
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

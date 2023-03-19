@@ -1,0 +1,67 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem 2rem;
+
+  &__content,
+  &__form {
+    flex-basis: 50%;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  &__content {
+
+    &--title,
+    &--desc {
+      text-align: left;
+    }
+
+    &--desc {
+      margin-bottom: 0;
+      color: rgba(clrs.color-type('2'), .7);
+    }
+  }
+
+  &__form {
+    fieldset {
+      display: flex;
+      gap: 1rem;
+
+      input {
+        flex-grow: 1;
+      }
+    }
+
+    input,
+    textarea {
+      padding: pad.padding-st-v(m) pad.padding-st-h(s);
+      border: 1px solid rgba(clrs.color-type("2"), 0.3);
+      font-size: type.font-size-st(sc);
+      width: 100%;
+    }
+
+    input[type="submit"] {
+      color: clrs.color-type('1');
+      background-color: clrs.color-link("3");
+      cursor: pointer;
+      border: none;
+
+
+      &:hover {
+        background-color: clrs.color-link("2");
+      }
+    }
+
+
+    textarea {
+      font-family: "Roboto", sans-serif;
+    }
+  }
+}

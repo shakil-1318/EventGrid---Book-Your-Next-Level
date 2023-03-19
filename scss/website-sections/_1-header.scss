@@ -96,4 +96,28 @@
       }
     }
   }
+
+
+  // ======================Gallery Header Redirect
+  &__redirect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    &--title {
+      color: clrs.color-type('1');
+    }
+
+    &--links {
+      display: flex;
+      gap: 2rem;
+
+      a,
+      span {
+        font-size: type.font-size-st(m);
+        color: clrs.color-type('1');
+      }
+    }
+  }
 }

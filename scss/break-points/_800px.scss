@@ -1,6 +1,6 @@
-@use "../general-styles/colors";
-@use "../general-styles/padding";
-@use "../general-styles/typography";
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
 
 @media screen and (max-width: 800px) {
 
@@ -28,4 +28,43 @@
       flex-basis: 30%;
     }
   }
+
+  // Blog Page
+  .blog-page {
+    flex-direction: column-reverse;
+
+    .blogs__popular-feeds {
+      row-gap: 0;
+
+      &--search {
+        padding: pad.padding-st-v(s) pad.padding-st-h(xs);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        fieldset {
+          padding: 0;
+
+          i {
+            display: none;
+          }
+        }
+      }
+
+      &--content {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+  }
+
+  .contact {
+    flex-wrap: wrap;
+
+    &__content,
+    &__form {
+      flex-basis: 100%;
+    }
+  }
+
+
 }

@@ -1,0 +1,13 @@
+.gallery__container {
+  &--img {
+    overflow: hidden;
+
+    img {
+      transition: all .25s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
